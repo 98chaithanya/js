@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="jumbotron text-center">prime or not<br>
+        <input type="text" placeholder="enter the value" id="text1" value="">
+        <input type="button" value="Check" onClick="result()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for="" id="result"></label></div>
+    <div class="jumbotron text-center">
+        <input type="text" placeholder="enter the value" id="text2" value="">
+        <input type="button" value="Check" onClick="result1()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for="" id="result1"></label></div>
+    <div class="jumbotron text-center">sum of array<br>
+        <input type="text" placeholder="enter the value" id="text3" value="">
+        <input type="button" value="Check" onClick="sum()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for="" id="result2"></label></div>
+    <div class="jumbotron text-center">odd or even<br>
+        <!-- <input type="text" placeholder="enter the value" id="text4" value=""> -->
+        <input type="button" value="check" onClick="num()" id="btn">
+        <input type="button" value="back" onclick="" id="btn">
+        <label for="" id="result3"></label>
+    </div>
+    <div class="jumbotron text-center">truncate<br>
+        <input type="text" placeholder="enter the value" id="text4" value="">
+        <input type="text" placeholder="enter the value" id="text5" value="">
+        <input type="button" value="Check" onClick="truncate()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for="" id="result4"></label></div>
+    <div class="jumbotron text-center">larger<br>
+        <input type="text" placeholder="enter the value" id="text6" value="">
+        <input type="text" placeholder="enter the value" id="text7" value="">
+        <input type="button" value="Check" onClick="large()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for="" id="result5"></label>
+        <label for="" id="result6"></label></div>
+
+    <script>
+        function result() {
+            var array = [];
+            var flag = 0;
+            array = document.getElementById("text1").value;
+            for (var i = 2; i <= array[0] / 2; i++) {
+                if (array[0] % i == 0) {
+                    document.getElementById("result").innerHTML = "not a prime number";
+                    flag = 1;
+                }
+            }
+            if (flag == 0) {
+                document.getElementById("result").innerHTML = "prime number";
+            }
+        }
+        //frequent
+        function result1() {
+            var arr1 = [];
+            var mf = 1;
+            var m = 0;
+            var item;
+            array = document.getElementById("text2").value;
+            for (var i = 0; i < arr1.length; i++) {
+                for (var j = i; j < arr1.length; j++) {
+                    if (arr1[i] == arr1[j])
+                        m++;
+                    if (mf < m) {
+                        mf = m;
+                        item = arr1[i];
+                    }
+                }
+                m = 0;
+            }
+            document.getElementById("result1").innerHTML = mf
+        }
+        //
+        function sum() {
+            var array1 = [];
+            var sum1 = 0;
+            array1 = document.getElementById("text3").value;
+            for (i = 0; i < array1.length; i++) {
+                sum1 = sum1 + (array1[i] * array1[i]);
+            }
+            return sum1;
+            document.getElementById("result2").innerHTML = sum1;
+        }
+        //odd or even
+        function num() {
+            var result;
+            for (i = 0; i < 15; i++) {
+                if (i % 2 == 0)
+                // document.getElementById("result3").innerHTML=i+"number is even";
+                    alert(i + "number is even");
+                else
+                // document.getElementById("result3").innerHTML=i+"number is odd";
+                    alert(i + "number is odd");
+
+                document.getElementById("result3").innerHTML = result;
+            }
+        }
+
+        function truncate() {
+            var string = [];
+            var limit;
+            string = document.getElementById("text4").value;
+            limit = document.getElementById("text5").value;
+            if (string.length <= limit) {
+                return string;
+            } else {
+                // return string.slice(0, limit) + "...";
+                document.getElementById("result4").innerHTML = string.slice(0, limit) + "...";
+            }
+        }
+
+        function large() {
+            var num1 = document.getElementById("text6").value;
+            var num2 = document.getElementById("text7").value;
+            if (num1 > num2) {
+                document.getElementById("result5").innerHTML = "first number is large";
+            } else {
+                document.getElementById("result6").innerHTML = "second number is large";
+            }
+        }
+    </script>
+</body>
+
+</html>

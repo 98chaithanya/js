@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //add 2 number
+        var x=5;
+        var y=10;
+        console.log(x+y);
+        // area of circle
+        var r=5;
+        console.log(3.14*r*r);
+        // area of rectangle
+        var l=5;
+        var w=10;
+        console.log(l*w);
+        // average of 2 number
+        var  a=10;
+        var  b=50;
+        var  c=30;
+        console.log((a+b+c)/2);
+         // odd or even
+        var num=18;
+        if(num%2==0)
+            console.log("number is even");
+        else
+            console.log("number is odd");
+          // calculater
+          var a=5;
+          var b=10;
+          console.log("add",a+b);
+          console.log("sub",a-b);
+          console.log("multi",a*b);
+          console.log("div",a/b);
+          console.log("mod",a%b);
+          // array
+        var array=[2,5,6,7,8];
+        console.log(array[0]);
+        for(var i = 0; i < array[4]; i++)
+        {
+        if(array[0]/= 1 || array[0]/1 == array[0],array[0]%i==0)
+        {
+              console.log(" prime number");
+        }
+         console.log(" not a prime number");
+    }
+    //positive negative or zero
+    var a=23;
+    if(a>0)
+    console.log("number is positive");
+    else if(a<0)
+    console.log("number is negative");
+    else
+    console.log("number is zero");
+    //largest number
+    var a=65;
+    var b=70;
+    var c=20;
+    if(a>b)
+    console.log("a is greater number",a);
+    else if(b>c)
+    console.log("b is greater number",b);
+    else
+    console.log("c is greater number",c);
+    //check prime
+    /*const number = parseInt(prompt("Enter a positive number: "));
+    var isPrime = true;
+    if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+    }
+   else if (number > 1) 
+   {
+    for (let i = 2; i < number; i++) 
+    {
+        if (number % i == 0)
+         {
+            isPrime = false;
+        }
+    }
+   }*/
+   //multiplication
+   // program to generate a multiplication table
+const number = parseInt(prompt('Enter an integer: '));
+for(let i = 1; i <= 10; i++) 
+{
+    const result = i * number;
+    console.log(`${number} * ${i} = ${result}`);
+}
+//intervel
+const lowerNumber = parseInt(prompt('Enter lower number: '));
+const higherNumber = parseInt(prompt('Enter higher number: '));
+
+console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+
+// looping from lowerNumber to higherNumber
+for (let i = lowerNumber; i <= higherNumber; i++) {
+    let flag = 0;
+
+    // looping through 2 to user input number
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    // if number greater than 1 and not divisible by other numbers
+    if (i > 1 && flag == 0) {
+        console.log(i);
+    }
+}
+    </script>
+</body>
+</html>

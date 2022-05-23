@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <input type="text" placeholder="enter the value" id="text1" value="">
+        <input type="button" value="Check" onClick="result()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for=""id="result"></label></div>
+    <div class="jumbotron1 text-center">
+        <input type="text" placeholder="enter the value" id="text2" value="">
+        <input type="button" value="Check" onClick="result2()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for=""id="result1"></label></div>
+    <div class="jumbotron2 text-center">
+            <input type="text" placeholder="enter the value" id="text3" value="">
+            <input type="button" value="Check" onClick="sum()" id="btn">
+            <input type="button" value="back" onClickback="">
+            <label for=""id="result2"></label></div>
+    <script>
+     var result=function()   
+     {
+    var array=[];
+    var flag=0;
+    array=document.getElementById("text1").value;
+    for(var i= 2;i<=array[0]/2; i++)
+    {
+    if (array[0]%i== 0)
+     {
+        document.getElementById("result").innerHTML="not a prime number";
+        flag=1;
+     }
+    }
+    if ( flag == 0) 
+     {
+     document.getElementById("result").innerHTML="prime number";
+     }
+    }
+    //frequent
+    var result1=function()
+    {
+    var arr1=[];
+    var mf = 1;
+    var m = 0;
+    var item;
+    array=document.getElementById("text2").value;
+    for (var i=0; i<arr1.length; i++)
+    {
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+    }
+    document.getElementById("result1").inner.HTML=mf
+    }
+    //uppercase
+    var str = 'c';
+var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+var result = [];
+  
+  for(var x=0; x<str.length; x++)
+  {
+    if(UPPER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toLowerCase());
+    }
+    else if(LOWER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toUpperCase());
+    }
+    else 
+    {
+      result.push(str[x]);
+    }
+  }
+document.getElementById(result.join(''));
+
+  /*  function result2()
+    {
+      
+        var string="";
+        string=document.getElementById("text3").value;
+         var string=string[0].toUpperCase("string");
+         console.log(string);
+         document.getElementById("result2").innerHTML=string;
+     }
+*/
+function sum() {
+   var array=[];
+   var sum=0;
+    document.getElementsById("text3").value;
+    for(i=0;i<array.length;i++)
+    {
+      sum=sum+(array[i]*array[i])
+    }
+    document.getElementById("result2").innerHTML=result2;
+  }
+//
+
+
+/*
+    array=document.getElementById("text1").value;
+    var mf = 1;
+    var m = 0;
+    var item;
+    for (var i = 0; i < arr1.length; i++)
+     {
+        for (var j = i; j < arr1.length; j++)
+         {
+              if (arr1[i] == arr1[j]) m++;
+                 if (mf < m)
+                  {
+                    mf = m;
+                    item = arr1[i];
+                  }
+         }
+
+         m = 0;
+     }
+document.getElementById("result1").inner.HTML=(item + " ( " + mf + " times ) ");
+    }*/
+</script>
+</body>
+</html>

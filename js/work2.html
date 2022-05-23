@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <source src="example.js">
+</head>
+
+<body>
+    <script>
+        //palindrom
+        var n = 155;
+        var a, b, temp = 0;
+        b = n;
+        while (n > 0) {
+            a = n % 10;
+            n = parseInt(n / 10);
+            temp = temp * 10 + a;
+        }
+        if (temp == b)
+            console.log("number is palindrom");
+        else
+            console.log("number is not palindrom");
+        //prgm to sort words in alphabatic
+        /*var Array = ["cat","monkey","dog"];
+Array = Array.sort();
+console.log(Array)*/
+        //alphabetic
+        const string = prompt('Enter a sentence: ');
+        const words = string.split(" ");
+        words.sort();
+        console.log('The sorted words are:');
+        for (const element of words) {
+            console.log(element);
+        }
+        //reverse a number
+        /*var num = 124323;
+        var reverse = (num) => parseInt(String(num)
+        .split("")
+        .reverse()
+        .join(""), 10);
+        console.log(reverse(num));*/
+        var a, b, temp = 0;
+        var n = 34532;
+        while (n > 0) {
+            a = n % 10;
+            n = parseInt(n / 10);
+            temp = temp * 10 + a;
+        }
+        console.log(temp);
+        //prgrm to check the number of oocurance of a character in the string
+        var count = 0;
+        var str = "vgbng"
+        var letter;
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) == letter) {
+                count += 1;
+            }
+        }
+        /*
+        prgrm to check distiguish palindrome
+        prgm to sort words in alphabatic
+        prgrm to replace characters of a string
+        prgrm to reverse a number
+        prgrm to check the number of oocurance of a character in the string
+        convert the 1st letter of a string into uppercase
+        prgrm to count no.of wovels in a string*/
+    </script>
+</body>
+
+</html>
